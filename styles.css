@@ -1,0 +1,137 @@
+:root {
+  color-scheme: light;
+  --ink: #171a1e;
+  --muted: #5d6771;
+  --subtle: #777f87;
+  --paper: #f7f6f3;
+  --surface: #ffffff;
+  --line: rgba(17, 19, 24, 0.12);
+  --accent: #9a6500;
+  --max: 760px;
+}
+
+* { box-sizing: border-box; }
+
+html { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.65;
+}
+
+a { color: var(--accent); text-underline-offset: 0.18em; }
+
+a:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.shell {
+  width: min(calc(100% - 40px), var(--max));
+  margin: 0 auto;
+}
+
+.brand {
+  padding: 28px 0 64px;
+}
+
+.wordmark {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 1.12rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hero { padding-bottom: 48px; }
+
+.eyebrow,
+.kicker {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+h1,
+h2 {
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+h1 {
+  max-width: 680px;
+  font-size: clamp(2.4rem, 8vw, 4.5rem);
+}
+
+.policy h1 {
+  font-size: clamp(2.35rem, 7vw, 3.8rem);
+}
+
+h2 {
+  margin-top: 2.2rem;
+  font-size: 1.35rem;
+}
+
+.lede {
+  max-width: 650px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+.card {
+  margin: 10px 0 64px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--surface);
+}
+
+.card h2 { margin-top: 0; font-size: 1.75rem; }
+
+.card p { color: var(--muted); }
+
+.links { margin-top: 18px; font-weight: 700; }
+
+.policy article {
+  padding: 0 0 28px;
+}
+
+.policy article > .meta {
+  margin: 22px 0 42px;
+  color: var(--muted);
+}
+
+.policy section p,
+.policy section li {
+  color: var(--muted);
+}
+
+.policy section p {
+  margin: 0.7rem 0 0;
+}
+
+.policy ul {
+  margin: 0.7rem 0 0;
+  padding-left: 1.4rem;
+}
+
+footer {
+  padding: 28px 0 52px;
+  border-top: 1px solid var(--line);
+  color: var(--subtle);
+  font-size: 0.92rem;
+}
+
+footer p { margin: 0.3rem 0; }
+
+@media (max-width: 520px) {
+  .brand { padding-bottom: 46px; }
+  .card { padding: 22px; }
+}
